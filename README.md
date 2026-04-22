@@ -8,7 +8,7 @@
 See the live demo (of the default configuration) here:
 https://pawroman.github.io/zola-theme-terminimal/
 
-Tested with Zola v0.19.2.
+Tested with Zola v0.22.1.
 
 Please note that earlier (and older) versions might not work because of breaking changes across Zola versions.
 
@@ -30,8 +30,7 @@ be released.
 
 Starting from version v1.0.0, the project adopted [Semantic Versioning](https://semver.org/).
 
-Please check the [GitHub releases](https://github.com/pawroman/zola-theme-terminimal/releases) to see a change log
-and work out if there's any breaking changes.
+Release notes and breaking changes are documented in [CHANGELOG.md](./CHANGELOG.md).
 
 ## How to start
 
