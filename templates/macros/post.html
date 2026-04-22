@@ -24,11 +24,13 @@
 
 
 {% macro date(page) %}
-    <span class="post-date">
-        {%- if page.date %}
-            {{ page.date | date(format="%Y-%m-%d") }}
-        {% endif -%}
-    </span>
+    {%- if page.date -%}
+        <time datetime="{{ page.date | date(format='%+') }}" class="post-date">
+            {{- page.date | date(format="%Y-%m-%d") -}}
+        </time>
+    {%- else -%}
+        <span class="post-date"></span>
+    {%- endif %}
 {% endmacro post_date %}
 
 
@@ -82,7 +84,9 @@
         {% endif -%}
         <li class="post-list">
             <a href="{{ page.permalink | safe }}">
-                <span class="post-date">{{ page.date }}</span>
+                {%- if page.date -%}
+                    <time datetime="{{ page.date | date(format='%+') }}" class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</time>
+                {%- endif %}
                 :: <span class="post-list-title">{{ page.title }}</span></a>
             {{ post_macros::tags(page=page, short=true) }}
         </li>
@@ -102,7 +106,7 @@
                 {%- set sep = "&nbsp;" -%}
             {% endif -%}
             {%- for tag in page.taxonomies.tags | sort | unique(case_sensitive=false) %}
-                <a class="post-tag" href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}">#{{ tag }}</a>
+                <a class="post-tag" href="{{ get_taxonomy_url(kind='tags', name=tag) | safe }}" rel="tag">#{{ tag }}</a>
                 {%- if not loop.last %}{{ sep | safe }}{% endif -%}
             {% endfor -%}
         </span>

@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.0] - 2026-04-22
+
+Accessibility and micro-SEO polish, all without adding JavaScript.
+
+### Added
+
+- **`<link rel="canonical">`** on every rendered page (post, section,
+  taxonomy, term, and 404). Prevents duplicate-content confusion for search
+  engines when URLs can be reached via multiple paths.
+- **Skip-to-content link** (`<a class="skip-link" href="#main">`) rendered
+  as the first element in `<body>`. Visually hidden until it receives
+  keyboard focus; lets keyboard and screen-reader users bypass the header.
+- **`<main id="main">`** landmark anchor target for the skip link.
+- **`aria-label="Main"`** on the site `<nav class="menu">`.
+- **`aria-current="page"`** on the active menu item's `<a>` (in addition
+  to the existing `class="active"` colour change, which was invisible to
+  screen readers).
+- **`rel="tag"`** on taxonomy `<a class="post-tag">` links (microformat).
+
+### Changed
+
+- **Post dates now use `<time datetime="..." class="post-date">`** instead
+  of `<span>`. Provides a machine-readable ISO 8601 timestamp alongside
+  the human-facing `YYYY-MM-DD` display. Existing `.post-date` CSS
+  selectors continue to match.
+
+### Removed
+
+- **`<meta name="robots" content="noodp">`** — this directive has been
+  ignored by Google (2017) and Bing (2019). Removing clears the dead line.
+
 ## [3.1.0] - 2026-04-22
 
 SEO refinements on top of v3.0.0.
@@ -78,6 +109,7 @@ improvements.
   `div.post` or `div.content` — use the class selectors instead
   (`.post`, `.content`).
 
-[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.1.0...HEAD
+[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.2.0...HEAD
+[3.2.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.2.0
 [3.1.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.1.0
 [3.0.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.0.0

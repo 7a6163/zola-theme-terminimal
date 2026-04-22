@@ -246,3 +246,28 @@ hr {
 .hidden {
   display: none;
 }
+
+// Visually hidden until keyboard focus — a11y skip link.
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+
+  &:focus {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: var(--background);
+    text-decoration: none;
+    z-index: 999;
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}

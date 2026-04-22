@@ -3,7 +3,6 @@
 {% macro head(config) %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <meta name="robots" content="noodp"/>
 
     <link rel="preload" as="font" type="font/woff2" crossorigin
           href="{{ get_url(path='fonts/hack-regular.woff2?sha=3114f1256', trailing_slash=false) | safe }}">
@@ -79,6 +78,7 @@
         {%- set og_image = config.extra.default_og_image %}
     {%- endif %}
 {%- endif -%}{# #}
+    <link rel="canonical" href="{{ permalink | safe }}">
     <meta name="description" content="{{ description | safe }}">
 
     <meta property="og:description" content="{{ description | safe }}">

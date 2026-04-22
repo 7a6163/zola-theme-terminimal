@@ -37,6 +37,7 @@
 </head>
 
 <body class="">
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="container">
     {% block header %}
     <header class="header">
@@ -67,7 +68,7 @@
     </header>
     {% endblock header %}
 
-    <main class="content">
+    <main class="content" id="main">
         {% block content %}
         <div class="posts">
             {%- if paginator %}
