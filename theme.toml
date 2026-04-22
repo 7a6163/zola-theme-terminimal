@@ -45,3 +45,11 @@ post_view_navigation_prompt = "Thanks for reading! Read other posts?"
 # Switch this to true if you need full unicode support.
 # Defaults to false.
 use_full_hack_font = false
+
+# Optional: author homepage/URL. Used in JSON-LD structured
+# data as the `author.url` for BlogPosting and WebSite.
+#author_url = "https://example.com"
+
+# Optional: OpenGraph locale (BCP 47 with region, e.g. "en_US",
+# "zh_TW"). When unset, no `og:locale` tag is emitted.
+#og_locale = "en_US"

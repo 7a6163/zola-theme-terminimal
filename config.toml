@@ -50,6 +50,14 @@ logo_text = "Terminimal theme"
 # entirely replaces default copyright and author.
 #copyright_html = "My custom&nbsp;<b>copyright</b>"
 
+# Optional: author homepage/URL. Used in JSON-LD structured
+# data as the `author.url` for BlogPosting and WebSite.
+#author_url = "https://example.com"
+
+# Optional: OpenGraph locale (BCP 47 with region, e.g. "en_US",
+# "zh_TW"). When unset, no `og:locale` tag is emitted.
+#og_locale = "en_US"
+
 # menu is enabled by adding menu_items (optional)
 menu_items = [
     # each of these is optional, name and url are required

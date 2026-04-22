@@ -121,6 +121,32 @@ Additionally, for the section pages and for posts to have a fallback image, add
 default_og_image = "static/ocean.jpg"
 ```
 
+### OpenGraph locale
+
+By default, no `og:locale` tag is emitted (there is no reliable way to derive
+a region from Zola's `default_language`). Set an explicit value to opt in:
+
+```toml
+[extra]
+og_locale = "en_US"  # BCP 47 with region, e.g. "en_US", "zh_TW", "de_DE"
+```
+
+### JSON-LD structured data
+
+The theme emits JSON-LD (`<script type="application/ld+json">`) for Google rich
+results: `BlogPosting` on individual posts, `WebSite` on the home and sections.
+The author block uses `config.extra.author`; set `author_url` to include a
+homepage link:
+
+```toml
+[extra]
+author = "My Name"
+author_url = "https://example.com"
+```
+
+JSON-LD is inert JSON data — it does not execute and does not violate the
+theme's no-JavaScript policy.
+
 ## Configuration
 
 ### Only show the post's description

@@ -13,6 +13,8 @@
 
     {%- block open_graph %}{{ head_macros::open_graph(config=config) }}{% endblock open_graph -%}
 
+    {%- block structured_data %}{{ head_macros::structured_data(config=config) }}{% endblock structured_data -%}
+
     {%- if config.generate_feeds %}
         {%- for feed in config.feed_filenames %}
             {%- if feed is containing('atom') %}
