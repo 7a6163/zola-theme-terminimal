@@ -35,7 +35,7 @@
 {% macro earlier_later(page) %}
     {%- if config.extra.enable_post_view_navigation %}
         {%- if page.lower or page.higher %}
-            <div class="pagination">
+            <nav class="pagination" aria-label="Post navigation">
                 <div class="pagination__title">
                     <span class="pagination__title-h">{{ config.extra.post_view_navigation_prompt }}</span>
                     <hr />
@@ -58,7 +58,7 @@
                         </span>
                     {% endif -%}
                 </div>
-            </div>
+            </nav>
         {% endif -%}
     {% endif -%}
 {% endmacro earlier_later %}
