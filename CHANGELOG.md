@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.0] - 2026-04-22
+
+SEO refinements on top of v3.0.0.
+
+### Changed
+
+- **`og:locale` now auto-derives** from `config.default_language` (with
+  dashes replaced by underscores, e.g. `zh-TW` → `zh_TW`) when
+  `config.extra.og_locale` is unset. Previously the tag was simply omitted
+  when no explicit value was set. `og_locale` still overrides for sites
+  whose `default_language` lacks a region (e.g. `"en"` → set
+  `og_locale = "en_US"`).
+- **`page_titles` default flipped from `"main_only"` to `"combined"`.**
+  Most blogs expect `"Page title | Main title"` for SEO and share previews.
+  Sites that had `page_titles = "main_only"` set explicitly are unaffected;
+  sites relying on the old implicit default will see their `<title>`
+  strings change to the combined form. The demo `config.toml` now leaves
+  the key commented out to exercise the new default.
+
 ## [3.0.0] - 2026-04-22
 
 Major bump from the upstream
@@ -59,5 +78,6 @@ improvements.
   `div.post` or `div.content` — use the class selectors instead
   (`.post`, `.content`).
 
-[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.0.0...HEAD
+[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.1.0
 [3.0.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.0.0

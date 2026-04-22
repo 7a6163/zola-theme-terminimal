@@ -50,6 +50,8 @@ use_full_hack_font = false
 # data as the `author.url` for BlogPosting and WebSite.
 #author_url = "https://example.com"
 
-# Optional: OpenGraph locale (BCP 47 with region, e.g. "en_US",
-# "zh_TW"). When unset, no `og:locale` tag is emitted.
+# Optional: OpenGraph locale override. Defaults to `config.default_language`
+# with dashes replaced by underscores (e.g. "zh-TW" -> "zh_TW"). Set this
+# when Zola's default_language lacks a region and OG needs one (e.g. "en"
+# -> should be "en_US").
 #og_locale = "en_US"

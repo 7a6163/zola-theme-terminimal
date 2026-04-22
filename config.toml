@@ -54,8 +54,10 @@ logo_text = "Terminimal theme"
 # data as the `author.url` for BlogPosting and WebSite.
 #author_url = "https://example.com"
 
-# Optional: OpenGraph locale (BCP 47 with region, e.g. "en_US",
-# "zh_TW"). When unset, no `og:locale` tag is emitted.
+# Optional: OpenGraph locale override. Defaults to `config.default_language`
+# with dashes replaced by underscores (e.g. "zh-TW" -> "zh_TW"). Set this
+# when Zola's default_language lacks a region and OG needs one (e.g. "en"
+# -> should be "en_US").
 #og_locale = "en_US"
 
 # menu is enabled by adding menu_items (optional)
@@ -96,15 +98,14 @@ use_full_hack_font = false
 # favicon_mimetype = "image/png"
 
 # Optional: Set how <title> elements are rendered.
+# Defaults to "combined".
 # Values:
 # - "main_only" -- only the main title (`config.title`) is rendered.
 # - "page_only" -- only the page title (if defined) is rendered,
 #                  falling back to `config.title` if not defined or empty.
-# - "combined" -- combine like so: "page_title | main_title",
-#                 or if page_title is not defined or empty, fall back to `main_title`
-#
-# Note that the main (index) page only has the main title.
-page_titles = "main_only"
+# - "combined" -- "page_title | main_title"; on the index (where there is
+#                 no page title) only main_title is rendered.
+#page_titles = "combined"
 
 # Optional: default image to use for OpenGraph.
 #           If the page doesnt set og_image, use this one as fallback. Usefull

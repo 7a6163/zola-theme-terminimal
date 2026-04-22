@@ -1,10 +1,6 @@
 {% macro title(page_title, main_title) %}
-    {%- if config.extra.page_titles and config.extra.page_titles == "combined" -%}
-        {%- if page_title -%}
-            {{ page_title }} | {{ main_title }}
-        {%- else -%}
-            {{ main_title }}
-        {%- endif -%}
+    {%- if config.extra.page_titles and config.extra.page_titles == "main_only" -%}
+        {{ main_title }}
     {%- elif config.extra.page_titles and config.extra.page_titles == "page_only" -%}
         {%- if page_title -%}
             {{ page_title }}
@@ -12,6 +8,11 @@
             {{ main_title }}
         {%- endif -%}
     {%- else -%}
-        {{ main_title }}
+        {#- Default ("combined"): "page_title | main_title", or just main_title on the index. -#}
+        {%- if page_title -%}
+            {{ page_title }} | {{ main_title }}
+        {%- else -%}
+            {{ main_title }}
+        {%- endif -%}
     {%- endif -%}
 {% endmacro title %}

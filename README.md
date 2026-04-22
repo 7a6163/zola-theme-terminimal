@@ -122,8 +122,10 @@ default_og_image = "static/ocean.jpg"
 
 ### OpenGraph locale
 
-By default, no `og:locale` tag is emitted (there is no reliable way to derive
-a region from Zola's `default_language`). Set an explicit value to opt in:
+By default the theme emits `og:locale` derived from Zola's
+`config.default_language`, with dashes replaced by underscores to match
+the OpenGraph format (`zh-TW` → `zh_TW`). Set `og_locale` to override when
+your `default_language` lacks a region and OG needs one:
 
 ```toml
 [extra]
@@ -355,19 +357,18 @@ favicon_mimetype = "image/png"
 
 The theme allows you to configure how the page titles (the `<title>` elements) are rendered.
 
-Use `"combined"` to render titles as `"Page title | Main title"`.
+The default is `"combined"` — titles are rendered as `"Page title | Main title"`, which is what most blogs want for SEO. Override in `[extra]` only if you need a different format:
 
 ```toml
 # Optional: Set how <title> elements are rendered.
+# Defaults to "combined".
 # Values:
 # - "main_only" -- only the main title (`config.title`) is rendered.
 # - "page_only" -- only the page title (if defined) is rendered,
 #                  falling back to `config.title` if not defined or empty.
-# - "combined" -- combine like so: "page_title | main_title",
-#                 or if page_title is not defined or empty, fall back to `main_title`
-#
-# Note that the main (index) page only has the main title.
-page_titles = "combined"
+# - "combined" -- "page_title | main_title"; on the index (where there is
+#                 no page title) only main_title is rendered.
+page_titles = "main_only"
 ```
 
 All the configuration options are also described in

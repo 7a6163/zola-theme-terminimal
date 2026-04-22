@@ -92,6 +92,8 @@
     <meta property="og:site_name" content="{{ config.title | safe }}">
 {%- if config.extra.og_locale %}
     <meta property="og:locale" content="{{ config.extra.og_locale }}">
+{%- elif config.default_language %}
+    <meta property="og:locale" content="{{ config.default_language | replace(from='-', to='_') }}">
 {%- endif %}
 {%- if page %}
     {%- if page.date %}
