@@ -1,12 +1,12 @@
 # Terminimal
 
-[![Build Status](https://github.com/pawroman/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/pawroman/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment)
+[![Build Status](https://github.com/7a6163/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/7a6163/zola-theme-terminimal/actions/workflows/pages/pages-build-deployment)
 ![No JavaScript](https://img.shields.io/badge/JavaScript-none-brightgreen.svg)
 
 ![Screenshot](../master/screenshot.png?raw=true)
 
 See the live demo (of the default configuration) here:
-https://pawroman.github.io/zola-theme-terminimal/
+https://7a6163.github.io/zola-theme-terminimal/
 
 Tested with Zola v0.22.1.
 
@@ -37,13 +37,13 @@ Release notes and breaking changes are documented in [CHANGELOG.md](./CHANGELOG.
 Option A: clone the theme directly into your Zola site folder:
 
 ```
-$ git clone https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+$ git clone https://github.com/7a6163/zola-theme-terminimal.git themes/terminimal
 ```
 
 Option B: include it as a git submodule (it's better if you plan to use CI builders):
 
 ```
-$ git submodule add https://github.com/pawroman/zola-theme-terminimal.git themes/terminimal
+$ git submodule add https://github.com/7a6163/zola-theme-terminimal.git themes/terminimal
 ```
 
 Then in your `config.toml` set:
@@ -394,7 +394,7 @@ base template, `index.html`, create file like this in `templates/index.html`:
 ## How to contribute
 
 If you spot any bugs or wish to contribute new features, please create a new
-[Pull Request](https://github.com/pawroman/zola-theme-terminimal/pulls).
+[Pull Request](https://github.com/7a6163/zola-theme-terminimal/pulls).
 
 ## Changes compared to the original theme
 

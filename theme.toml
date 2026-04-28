@@ -1,17 +1,23 @@
 name = "terminimal"
 description = "A simple, minimal retro theme"
 license = "MIT"
-homepage = "https://github.com/pawroman/zola-theme-terminimal"
+homepage = "https://github.com/7a6163/zola-theme-terminimal"
 min_version = "0.11.0"
 
 # An optional live demo URL
-demo = "https://pawroman.github.io/zola-theme-terminimal/"
+demo = "https://7a6163.github.io/zola-theme-terminimal/"
 
 [author]
-name = "Paweł Romanowski"
-homepage = "https://github.com/pawroman"
+name = "Zac"
+homepage = "https://github.com/7a6163"
 
-# The original theme this one's been forked off.
+# Immediate upstream this fork is based on.
+[upstream]
+author = "Paweł Romanowski"
+homepage = "https://github.com/pawroman"
+repo = "https://github.com/pawroman/zola-theme-terminimal"
+
+# The original theme upstream itself was forked from.
 [original]
 author =  "Radosław Kozieł"
 homepage = "https://radoslawkoziel.pl/"

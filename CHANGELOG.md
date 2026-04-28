@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.1] - 2026-04-28
+
+Branding switch: this fork now points at itself rather than upstream
+`pawroman/zola-theme-terminimal` for install instructions, demo URL,
+build badge, and authorship metadata. Upstream is still credited via the
+new `[upstream]` block in `theme.toml`, the dual-credit footer, the
+preserved MIT License attribution, and the changelog history note.
+
+### Changed
+
+- `theme.toml`: `homepage` and `demo` now point at the fork.
+  `[author]` is the fork maintainer (Zac / 7a6163). New `[upstream]`
+  block credits Paweł Romanowski's repo as the immediate upstream.
+  The pre-existing `[original]` block (Radek Kozieł's Hugo theme) is
+  preserved.
+- `README.md`: build-status badge, live-demo URL, `git clone` /
+  `git submodule` install snippets, and the "How to contribute" PR
+  link all switch to the fork.
+- `config.toml`: demo `base_url` and the demo navigation menu's GitHub
+  link now point at the fork.
+- `templates/index.html` (default footer): now reads
+  *"Theme: Terminimal by pawroman, fork by 7a6163"* — both linked.
+  Sites that override `config.extra.copyright_html` are unaffected.
+- `CLAUDE.md`: demo URL in the project description updated.
+
+### Preserved
+
+- `README.md` MIT License attribution to Paweł Romanowski (legal).
+- `CHANGELOG.md` v3.0.0 entry's "fork from pawroman v2.0.0" history
+  note.
+
 ## [3.2.0] - 2026-04-22
 
 Accessibility and micro-SEO polish, all without adding JavaScript.
@@ -109,7 +140,8 @@ improvements.
   `div.post` or `div.content` — use the class selectors instead
   (`.post`, `.content`).
 
-[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.2.0...HEAD
+[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.2.1...HEAD
+[3.2.1]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.2.1
 [3.2.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.2.0
 [3.1.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.1.0
 [3.0.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.0.0
