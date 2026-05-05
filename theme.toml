@@ -4,9 +4,6 @@ license = "MIT"
 homepage = "https://github.com/7a6163/zola-theme-terminimal"
 min_version = "0.11.0"
 
-# An optional live demo URL
-demo = "https://7a6163.github.io/zola-theme-terminimal/"
-
 [author]
 name = "Zac"
 homepage = "https://github.com/7a6163"

@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.2.2] - 2026-05-05
+
+Drop the unused public demo. This fork is consumed only as a Zola theme
+submodule by the maintainer's blog; there's no audience for a hosted
+demo site, so the deploy workflow and surrounding doc references have
+been removed. The top-level `config.toml` + `content/` remain as a
+local-only `zola serve` preview for theme development.
+
+### Removed
+
+- `.github/workflows/publish-pages.yml` — the `shalzz/zola-deploy-action`
+  workflow that deployed the demo to `gh-pages`.
+- `theme.toml`: optional `demo = "..."` field.
+- `README.md`: build-status badge, "See the live demo here..." pointer.
+
 ## [3.2.1] - 2026-04-28
 
 Branding switch: this fork now points at itself rather than upstream
@@ -140,7 +155,8 @@ improvements.
   `div.post` or `div.content` — use the class selectors instead
   (`.post`, `.content`).
 
-[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.2.1...HEAD
+[Unreleased]: https://github.com/7a6163/zola-theme-terminimal/compare/v3.2.2...HEAD
+[3.2.2]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.2.2
 [3.2.1]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.2.1
 [3.2.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.2.0
 [3.1.0]: https://github.com/7a6163/zola-theme-terminimal/releases/tag/v3.1.0
